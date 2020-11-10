@@ -2,6 +2,7 @@ package com.tensquare.base.service;
 
 import com.tensquare.base.entity.Label;
 import entity.Result;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -47,4 +48,21 @@ public interface LabelService {
      */
     public void deleteById(String id);
 
+    /**
+     * 条件查询
+     *
+     * @param label label
+     * @return list
+     */
+    List<Label> find(Label label);
+
+    /**
+     * 分页查询
+     *
+     * @param label label
+     * @param page page
+     * @param size size
+     * @return Page
+     */
+    Page<Label> pageQuery(Label label, int page, int size);
 }

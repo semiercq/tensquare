@@ -20,7 +20,7 @@ public class Label implements Serializable {
     /**
      * 标签名称
      */
-    private String labelname;
+    private String labelName;
 
     /**
      * 状态
@@ -50,12 +50,12 @@ public class Label implements Serializable {
         this.id = id;
     }
 
-    public String getLabelname() {
-        return labelname;
+    public String getLabelName() {
+        return labelName;
     }
 
-    public void setLabelname(String labelname) {
-        this.labelname = labelname;
+    public void setLabelName(String labelName) {
+        this.labelName = labelName;
     }
 
     public String getState() {
