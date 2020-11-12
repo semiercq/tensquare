@@ -65,7 +65,7 @@ public class LabelServiceImpl implements LabelService {
         return labelRepository.findAll(new Specification<Label>() {
             /**
              * 条件查询
-             * @param root 根对象，也就是要把对象封装到哪个对象中。where 类名=label.getid
+             * @param root 根对象，也就是要把对象封装到哪个对象中。where 类名=label.getId
              * @param query 封装的都是查询的关键字，比如group by order by 等
              * @param cb 用来封装条件对象
              * @return 如果返回null表示不需要任何条件

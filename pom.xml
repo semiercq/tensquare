@@ -10,7 +10,9 @@
     <modules>
         <module>tensquare_common</module>
         <module>tensquare_base</module>
-        <module>tensquare_base</module>
+        <module>tensquare_qa</module>
+        <module>tensquare_friend</module>
+        <module>tensquare_article</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -40,6 +42,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -60,6 +68,19 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <!-- Spring cloud -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.M9</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <pluginRepositories>
         <pluginRepository>
