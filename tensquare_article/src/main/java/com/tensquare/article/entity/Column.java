@@ -31,7 +31,7 @@ public class Column implements Serializable {
     /**
      * 用户ID
      */
-    private String userid;
+    private String userId;
     /**
      * 申请日期
      */
