@@ -1,0 +1,19 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: tensuare-sms
+  rabbitmq:
+    host: 192.168.0.103
+aliyun:
+  sms:
+    accessKeyId: oMDmlLz3D22rwn1I
+    accesskeySecret: Ncj3v39alcRPWVgDxUWnAxuU7rGf98
+    template_code: SMS_167400843
+    sign_name: tengyun
+# 腾讯云短信服务配置
+  qcloud:
+    sms:
+      app-id: 1400452103
+      app-key: f26a1e52d8aeba52012a4a987f38c1de
+

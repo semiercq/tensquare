@@ -1,5 +1,6 @@
 package com.tensquare.qa.controller;
 
+import com.tensquare.qa.client.BaseClient;
 import com.tensquare.qa.entity.Problem;
 import com.tensquare.qa.service.ProblemService;
 import entity.PageResult;
@@ -19,11 +20,23 @@ import java.util.Map;
 @CrossOrigin
 @RequestMapping("/problem")
 public class ProblemController {
+
     @Autowired
     private ProblemService problemService;
 
-//    @Autowired
-//    private LabelClient labelClient;
+    @Autowired
+    private BaseClient baseClient;
+
+
+    /**
+     * 根据ID查询
+     * @param labelId ID
+     * @return Result
+     */
+    @GetMapping("/label/{labelId}")
+    public Result findById(@PathVariable String labelId){
+        return baseClient.findById(labelId);
+    }
 
     @GetMapping("/newList/{labelId}/{page}/{size}")
     public Result newList(@PathVariable String labelId,
