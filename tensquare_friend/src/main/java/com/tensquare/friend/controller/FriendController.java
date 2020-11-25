@@ -59,7 +59,6 @@ public class FriendController {
         }
         //得到当前登录的用户id
         String userId = claims.getId();
-        System.out.println(type + "!!!!" + userId + "@@@@" + friendId);
         //判断是添加好友还是添加非好友
         if (type != null) {
             if (type.equals("1")) {
